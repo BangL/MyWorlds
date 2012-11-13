@@ -1,11 +1,47 @@
-name: My Worlds
-main: com.bergerkiller.bukkit.mw.MyWorlds
-version: 1.53
-author: bergerkiller
-softdepend: [Spout]
-depend: [BKCommonLib]
-loadbefore: [MobArena, RegionForSale]
-dev-url: http://dev.bukkit.org/server-mods/my-worlds/
+name: MyWorldsLite
+main: com.bergerkiller.bukkit.mw.MyWorldsLite
+version: 0.1
+
+authors: [ bergerkiller, BangL ]
+depend: [ BKCommonLib ]
+loadbefore:
+- CasinoSlots
+- CopyBooks
+- ChunkFixer
+- Citizens
+- ClayGen
+- DeathCube
+- DragonTravel
+- Dynmap
+- ecoCreature
+- EndReset
+- Essentials
+- FreezeTime
+- HawkEye
+- HiddenCommandSigns
+- LotManager
+- LWC
+- MineBooks
+- MobArena
+- MobRider
+- MonsterBox
+- PermissionsEx
+- PlayerStatusSigns
+- PortalBlocks
+- ShowCaseStandalone
+- SignEdit
+- SignLink
+- SimpleCommandSigns
+- SimpleClans
+- SimpleSpleef
+- SpongeReloaded
+- SwornJail
+- Timer
+- War
+- WorldBorder
+- WorldEdit
+- WorldGuard
+
 commands:
     world:
         description: Commands to manage your worlds
@@ -21,17 +57,10 @@ commands:
             /world listgenerators - List world generators
             /world setspawn - Set the spawn point of a world
             /world spawn - Teleport to world spawn
-            /world time - Set the time of a world
-            /world weather - Set the weather of a world
             /world gamemode - Set the game mode of a world
             /world difficulty - Set the difficulty of a world
-            /world togglepvp - Toggle PVP mode on/off
-            /world allowspawn - Allow mobs to spawn
-            /world denyspawn - Deny mobs from spawning
-            /world inventory - Manage world inventories
             /world saving - Toggle world saving on/off
             /world spawnloaded - Toggle spawn loaded on/off
-            /world evacuate - Evacuate all players of a world
             /world delete - Delete a world permanently
             /world copy - Copy a world to a new name
             /world repair - Repair a world
@@ -79,20 +108,6 @@ commands:
             /world spawn - Teleport to current world spawn
             /world spawn [world] - Teleport to world spawn
             /world spawn [world] [playernames] - Teleport players
-    world time:
-        description: Sets the time of a world
-        usage: |
-            /world time [time]
-            /world time [time] [world]
-            /world time always 12:45
-            /world time night world1
-    world weather:
-        description: Sets the weather of a world
-        usage: |
-            /world weather [state]
-            /world weather [state] [world]
-            /world weather always raining
-            /world weather sunny world2
     world gamemode:
         description: Sets the game mode of a world
         usage: |
@@ -107,34 +122,6 @@ commands:
             /world difficulty [mode] [world]
             /world difficulty hard
             /world difficulty normal world3
-    world togglepvp:
-        description: Toggles PVP on or off
-        usage: |
-            /world togglepvp
-            /world togglepvp [world]
-    world allowspawn:
-        description: Allows certain mobs to spawn
-        usage: |
-            /world allowspawn [mob]
-            /world allowspawn [mob] [world]
-            /world allowspawn animal
-            /world allowspawn creeper world2
-    world denyspawn:
-        description: Denies certain mobs from spawning
-        usage: |
-            /world denyspawn [mob]
-            /world denyspawn [mob] [world]
-            /world denyspawn animal
-            /world denyspawn creeper world2
-    world inventory:
-        description: Changes world inventory settings
-        usage: |
-            /world inventory enable
-            /world inventory enable [world]
-            /world inventory disable
-            /world inventory disable [world]
-            /world inventory split [world...]
-            /world inventory merge [world1] [world...]
     world saving:
         description: Turns world saving on or off
         usage: |
@@ -147,11 +134,6 @@ commands:
         usage: |
             /world spawnloaded
             /world spawnloaded [world]
-    world evacuate:
-        description: Clears a world of players
-        usage: |
-            /world evacuate
-            /world evacuate [world]
     world delete:
         description: Deletes an unloaded world
         usage: /world delete [world]
@@ -161,6 +143,3 @@ commands:
     world repair:
         description: Repairs an unloaded world
         usage: /world repair [world]
-    tpp:
-        description: Cross-world teleportation commands
-        usage: /tpp [Portalname/Worldname] - Teleport to a Portal or World
