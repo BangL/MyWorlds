@@ -476,8 +476,7 @@ public class WorldManager {
     }
     
     public static void setTime(World world, long time) {
-        net.minecraft.server.World w = ((CraftWorld) world).getHandle();
-        w.setTime(time); //fix tick lists?
+        world.setTime(time);
     }
 
     private static boolean delete(File folder) {
